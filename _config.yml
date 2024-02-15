@@ -103,7 +103,7 @@ author:
       url: ""
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "malito:asemashraf2012@gmail.com"
+      url: "mailto:asemashraf2012@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/Asem_Ashraf19"
