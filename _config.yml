@@ -25,7 +25,7 @@ url: # the base hostname & protocol for your site e.g. "https://mmistakes.github
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: /assets/images/site-data/ # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo: /assets/images/site_data/ # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 170
@@ -93,7 +93,7 @@ analytics:
 # Site Author
 author:
   name: "Asem Ashraf"
-  avatar: /assets/images/site-data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "Malware Analysis & Reverse Engineering Adventures."
   # location: "Area 51"
   email:
