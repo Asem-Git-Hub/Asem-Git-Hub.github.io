@@ -93,7 +93,7 @@ analytics:
 # Site Author
 author:
   name: "Asem Ashraf"
-  avatar: /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: /assets/images/site-data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "Malware Analysis & Reverse Engineering Adventures."
   # location: "Area 51"
   email:
