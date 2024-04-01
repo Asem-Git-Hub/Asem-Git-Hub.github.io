@@ -31,7 +31,9 @@ toc: true
 
    **In this section, we'll explore some methods used to destroy evidence and ways to recover evidence that has been destroyed.**
 
-   Digital evidence encompasses a vast array of data types, each governed by distinct data structures and storage mechanisms. From file systems like <u>NTFS</u> and <u>FAT</u> to database formats like <u>SQLite</u> and <u>MySQL</u>, understanding the intricacies of digital data structures is paramount for forensic practitioners. Tools like <u>FTK Imager</u> and <u>Autopsy</u> facilitate the analysis of digital evidence, allowing investigators to extract valuable artifacts from storage media and reconstruct digital timelines with precision.
+   Digital evidence encompasses a vast array of data types, each governed by distinct data structures and storage mechanisms. From file systems like <u>NTFS</u> and <u>FAT</u> to database formats like <u>SQLite</u> and <u>MySQL</u>.
+   
+   understanding the intricacies of digital data structures is paramount for forensic practitioners. Tools like <u>FTK Imager</u> and <u>Autopsy</u> facilitate the analysis of digital evidence, allowing investigators to extract valuable artifacts from storage media and reconstruct digital timelines with precision.
 
   ![error](/assets/images/digital-forensics/recovering_digital-evidence/ftk_image.png)
 
