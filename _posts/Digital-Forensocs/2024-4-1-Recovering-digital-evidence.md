@@ -2,7 +2,7 @@
 title: " Recovering Digital Evidence "
 classes: wide
 header:
-  teaser: /assets/images/digital-forensics/recovering_digital-evidenc/main.png
+  teaser: /assets/images/digital-forensics/recovering_digital-evidence/main.png
 ribbon:
 description: " Tracing Digital Footprints: Insights into File Recovery and Data Carving"
 categories:
