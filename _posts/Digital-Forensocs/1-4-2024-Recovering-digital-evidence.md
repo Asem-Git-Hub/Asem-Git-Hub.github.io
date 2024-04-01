@@ -2,7 +2,7 @@
 title: " Recovering Digital Evidence "
 classes: wide
 header:
-  teaser: /assets/images/malware-analysis/recovering_digital-evidenc/main.png
+  teaser: /assets/images/digital-forensics/recovering_digital-evidenc/main.png
 ribbon:
 description: " Tracing Digital Footprints: Insights into File Recovery and Data Carving"
 categories:
@@ -17,7 +17,7 @@ toc: true
 
    Digital evidence refers to information stored or sent in digital format that can be presented in court during a trial. It includes things like audio files, voice recordings, address books, backups of programs (even on mobile devices), browsing history, cookies, databases, and compressed archives (like ZIP or RAR files), including encrypted ones.
 
-  ![error](/assets/images/malware-analysis/recovering_digital-evidence/case_1.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/case_1.png)
 
 ## Destroyed Evidence:
 
@@ -31,7 +31,7 @@ toc: true
 
    Digital evidence encompasses a vast array of data types, each governed by distinct data structures and storage mechanisms. From file systems like <u>NTFS</u> and <u>FAT</u> to database formats like <u>SQLite</u> and <u>MySQL</u>, understanding the intricacies of digital data structures is paramount for forensic practitioners. Tools like <u>**FTK Imager**</u> and <u>**Autopsy**</u> facilitate the analysis of digital evidence, allowing investigators to extract valuable artifacts from storage media and reconstruct digital timelines with precision.
 
-  ![error](/assets/images/malware-analysis/recovering_digital-evidence/ftk_image.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/ftk_image.png)
 
 
 ## Eradicated Evidence: Overcoming Data Destruction
@@ -47,7 +47,7 @@ toc: true
 
    The deletion of files leaves behind digital footprints that can be traced and reconstructed using specialized tools and techniques. Tools like <u>**Recuva**</u> and <u>**PhotoRec**</u> facilitate the recovery of deleted files by scanning storage media for remnants of data clusters and file headers. 
 
-  ![error](/assets/images/malware-analysis/recovering_digital-evidence/rec_photo.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/rec_photo.png)
 
    Forensic experts utilize file system journaling and metadata analysis to pinpoint and restore deleted files, meticulously reconstructing digital trails with precision and accuracy. **file system record storing the exact location of the deleted file on the disk is being marked as deleted and the disk space previously occupied by the deleted file is then labeled as available – but not overwritten with zeroes or other data.** 
 
@@ -85,7 +85,7 @@ toc: true
   
    - TRIM Command: TRIM is a feature in SSDs that swiftly wipes deleted information, typically within three minutes. Once data is marked as deleted by the operating system, TRIM zeros out the information, and its effects cannot be blocked even by Write-Blocking devices.
 
-  ![error](/assets/images/malware-analysis/recovering_digital-evidence/trim.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/trim.png)
 
   "NTFS DisableDeleteNotify = 0" - means that the TRIM feature is enabled on your SSD.
   "NTFS DisableDeleteNotify = 1" - means that the TRIM feature is disabled on your SSD.
@@ -102,7 +102,7 @@ toc: true
 
    Data carving techniques enable forensic practitioners to extract digital fragments from unallocated disk space, reconstructing deleted files with precision and accuracy. Tools like <u>**Scalpel**</u> and <u>**Foremost**</u> facilitate the extraction of file signatures and data patterns from disk images, enabling investigators to recover deleted files and artifacts. 
 
-  ![error](/assets/images/malware-analysis/recovering_digital-evidence/foremost.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/foremost.png)
 
 
    Advanced techniques such as entropy analysis and file header reconstruction aid in the identification and reconstruction of fragmented data, allowing practitioners to piece together the puzzle of digital evidence with meticulous detail.
