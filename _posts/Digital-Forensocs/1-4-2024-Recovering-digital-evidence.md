@@ -6,7 +6,7 @@ header:
 ribbon:
 description: " Tracing Digital Footprints: Insights into File Recovery and Data Carving"
 categories:
-  - 
+  - digital-forensics
 toc: true
 ---
 
