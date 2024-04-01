@@ -13,7 +13,8 @@ toc: true
 
 # Recovering Erased Digital Evidence:
 
-   In the world of computers and technology, retrieving erased digital evidence is a complex task that demands a deep understanding of how computers work and specialized investigation methods. Forensic experts use various tools and methods, such as examining file systems and using advanced techniques to piece together hidden information from digital files. In this detailed exploration, we delve into the process of recovering deleted digital evidence, highlighting the tools, methods, and technical factors that drive investigations in today's digital era.
+   In the world of computers and technology, retrieving erased digital evidence is a complex task that demands a deep understanding of how computers work and specialized investigation methods.
+   Forensic experts use various tools and methods, such as examining file systems and using advanced techniques to piece together hidden information from digital files. In this detailed exploration, we delve into the process of recovering deleted digital evidence, highlighting the tools, methods, and technical factors that drive investigations in today's digital era.
 
    Digital evidence refers to information stored or sent in digital format that can be presented in court during a trial. It includes things like audio files, voice recordings, address books, backups of programs (even on mobile devices), browsing history, cookies, databases, and compressed archives (like ZIP or RAR files), including encrypted ones.
 
@@ -29,23 +30,19 @@ toc: true
 
    **In this section, we'll explore some methods used to destroy evidence and ways to recover evidence that has been destroyed.**
 
-   Digital evidence encompasses a vast array of data types, each governed by distinct data structures and storage mechanisms. From file systems like <u>NTFS</u> and <u>FAT</u> to database formats like <u>SQLite</u> and <u>MySQL</u>, understanding the intricacies of digital data structures is paramount for forensic practitioners. Tools like <u>**FTK Imager**</u> and <u>**Autopsy**</u> facilitate the analysis of digital evidence, allowing investigators to extract valuable artifacts from storage media and reconstruct digital timelines with precision.
+   Digital evidence encompasses a vast array of data types, each governed by distinct data structures and storage mechanisms. From file systems like <u>NTFS</u> and <u>FAT</u> to database formats like <u>SQLite</u> and <u>MySQL</u>, understanding the intricacies of digital data structures is paramount for forensic practitioners. Tools like <u>FTK Imager</u> and <u>Autopsy</u> facilitate the analysis of digital evidence, allowing investigators to extract valuable artifacts from storage media and reconstruct digital timelines with precision.
 
   ![error](/assets/images/digital-forensics/recovering_digital-evidence/ftk_image.png)
 
-
 ## Eradicated Evidence: Overcoming Data Destruction
 
-
-   Criminals frequently try to hide their actions by deleting or altering digital evidence, making it difficult for forensic investigators. Nonetheless, tools such as <u>**EnCase**</u> Forensic and <u>**X-Ways**</u> Forensics empower practitioners to retrieve deleted files and artifacts by examining file system metadata and disk sectors. Methods like file carving and signature analysis assist in reconstructing digital artifacts, enabling investigators to unravel the intricacies of data destruction with precision.
-
-
+   Criminals frequently try to hide their actions by deleting or altering digital evidence, making it difficult for forensic investigators. Nonetheless, tools such as <u>EnCase</u> Forensic and <u>X-Ways</u> Forensics empower practitioners to retrieve deleted files and artifacts by examining file system metadata and disk sectors. Methods like file carving and signature analysis assist in reconstructing digital artifacts, enabling investigators to unravel the intricacies of data destruction with precision.
 
 ## Deleted Files: Tracing Digital Footprints:
 
    <u>The principle of file recovery of deleted files is based on the fact that Windows does not wipe the contents of the file when it’s being deleted.</u>
 
-   The deletion of files leaves behind digital footprints that can be traced and reconstructed using specialized tools and techniques. Tools like <u>**Recuva**</u> and <u>**PhotoRec**</u> facilitate the recovery of deleted files by scanning storage media for remnants of data clusters and file headers. 
+   The deletion of files leaves behind digital footprints that can be traced and reconstructed using specialized tools and techniques. Tools like <u>Recuva</u> and <u>PhotoRec</u> facilitate the recovery of deleted files by scanning storage media for remnants of data clusters and file headers. 
 
   ![error](/assets/images/digital-forensics/recovering_digital-evidence/rec_photo.png)
 
@@ -58,7 +55,7 @@ toc: true
    - Temporary files created by various applications.
    - Files that have been renamed.
 
-   Moreover, information stored in deleted files can be supplemented with data retrieved from other sources. For instance, Skype's "chatsync" folder retains internal data that may contain fragments of user conversations. This means that even if the Skype database is deleted, there's a chance to recover user chats if the "chatsync" folder exists. Several tools, such as <u>**Belkasoft Evidence Center**</u>, are available for this purpose.
+   Moreover, information stored in deleted files can be supplemented with data retrieved from other sources. For instance, Skype's "chatsync" folder retains internal data that may contain fragments of user conversations. This means that even if the Skype database is deleted, there's a chance to recover user chats if the "chatsync" folder exists. Several tools, such as <u>Belkasoft Evidence Center</u>, are available for this purpose.
 
 ## Formatted Hard Drives: Unraveling File System Structures
 
@@ -94,14 +91,12 @@ toc: true
    When attempting to recover data from SSDs or even accessing information from SSDs formatted with either a Full or Quick format, traditional methods are generally ineffective. Traditional data recovery methods can only be utilized on SSDs if the TRIM command is not executed or if at least one of the components does not support TRIM. These components include:
   
    - Operating System Version: Windows Vista and Windows 7 support TRIM, while Windows XP and earlier versions usually do not.
-   
    - Communication Interface: `SATA` and `eSATA` interfaces support TRIM, while external enclosures connected via USB, LAN, or FireWire typically do not.
- 
    - File System: Windows supports `TRIM` on `NTFS` volumes but not on FAT-formatted disks. Linux supports TRIM on all volume types, including those formatted with FAT.
 
+     
 ## Unveiling Data Carving: Extracting Digital Fragments
-
-   Data carving techniques enable forensic practitioners to extract digital fragments from unallocated disk space, reconstructing deleted files with precision and accuracy. Tools like <u>**Scalpel**</u> and <u>**Foremost**</u> facilitate the extraction of file signatures and data patterns from disk images, enabling investigators to recover deleted files and artifacts. 
+   Data carving techniques enable forensic practitioners to extract digital fragments from unallocated disk space, reconstructing deleted files with precision and accuracy. Tools like <u>Scalpel</u> and <u>Foremost</u> facilitate the extraction of file signatures and data patterns from disk images, enabling investigators to recover deleted files and artifacts. 
 
   ![error](/assets/images/digital-forensics/recovering_digital-evidence/foremost.png)
 
