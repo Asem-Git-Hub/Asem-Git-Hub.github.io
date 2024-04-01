@@ -65,7 +65,7 @@ toc: true
    The ability to recover data from a formatted hard drive depends on several factors. Data from a formatted hard drive may be retrievable either through data carving technology or by using commercial data recovery tools. There are two primary methods of formatting a hard drive:
 
    **Full Format:**
-    This process initializes the disk by creating a new file system on the partition being formatted and checks the disk for bad sectors. In older versions of Windows (prior to Vista), a full format operation didn't zero the disk, instead, it scanned the disk surface sector by sector and marked unreliable sectors as bad. However, in Vista and Windows 7, a full format operation will:
+    This process initializes the disk by creating a new file system on the partition being formatted and checks the disk for bad sectors. In older versions of Windows (prior to Vista), a full format operation didn't zero the disk, instead, it scanned the disk surface sector by sector and marked unreliable sectors as bad. However, in Vista and Windows 7, a full-format operation will:
   
    - Wipe the disk clean.
    - Write zeroes onto the disk.
@@ -77,7 +77,7 @@ toc: true
 
 ## SSD Conundrum: Navigating Flash Storage
 
-   Solid-State Drives (SSDs) are a newer storage technology known for their speed and different internal storage method compared to traditional drives. Key points about SSDs include:
+   Solid-State Drives (SSDs) are a newer storage technology known for their speed and different internal storage methods compared to traditional drives. Key points about SSDs include:
 
    - Speed: SSDs operate much faster than traditional hard drives.
 
@@ -87,8 +87,9 @@ toc: true
 
   ![error](/assets/images/digital-forensics/recovering_digital-evidence/trim.png)
 
-  "NTFS DisableDeleteNotify = 0" - means that the TRIM feature is enabled on your SSD.
-  "NTFS DisableDeleteNotify = 1" - means that the TRIM feature is disabled on your SSD.
+  `NTFS DisableDeleteNotify = 0`  means that the TRIM feature is enabled on your SSD.
+  
+  `NTFS DisableDeleteNotify = 1` means that the TRIM feature is disabled on your SSD.
   
    When attempting to recover data from SSDs or even accessing information from SSDs formatted with either a Full or Quick format, traditional methods are generally ineffective. Traditional data recovery methods can only be utilized on SSDs if the TRIM command is not executed or if at least one of the components does not support TRIM. These components include:
   
