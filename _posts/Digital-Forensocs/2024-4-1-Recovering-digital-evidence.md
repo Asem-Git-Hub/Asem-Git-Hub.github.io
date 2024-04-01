@@ -39,7 +39,9 @@ toc: true
 
 ## Eradicated Evidence: Overcoming Data Destruction
 
-   Criminals frequently try to hide their actions by deleting or altering digital evidence, making it difficult for forensic investigators. Nonetheless, tools such as <u>EnCase</u> Forensic and <u>X-Ways</u> Forensics empower practitioners to retrieve deleted files and artifacts by examining file system metadata and disk sectors. Methods like file carving and signature analysis assist in reconstructing digital artifacts, enabling investigators to unravel the intricacies of data destruction with precision.
+   Criminals frequently try to hide their actions by deleting or altering digital evidence, making it difficult for forensic investigators. Nonetheless, tools such as <u>EnCase</u> Forensic and <u>X-Ways</u> Forensics empower practitioners to retrieve deleted files and artifacts by examining file system metadata and disk sectors. 
+   
+   Methods like file carving and signature analysis assist in reconstructing digital artifacts, enabling investigators to unravel the intricacies of data destruction with precision.
 
 ## Deleted Files: Tracing Digital Footprints:
 
@@ -58,7 +60,8 @@ toc: true
    - Temporary files created by various applications.
    - Files that have been renamed.
 
-   Moreover, information stored in deleted files can be supplemented with data retrieved from other sources. For instance, Skype's "chatsync" folder retains internal data that may contain fragments of user conversations. This means that even if the Skype database is deleted, there's a chance to recover user chats if the "chatsync" folder exists. Several tools, such as <u>Belkasoft Evidence Center</u>, are available for this purpose.
+   Moreover, information stored in deleted files can be supplemented with data retrieved from other sources. For instance, Skype's "chatsync" folder retains internal data that may contain fragments of user conversations. 
+   This means that even if the Skype database is deleted, there's a chance to recover user chats if the "chatsync" folder exists. Several tools, such as <u>Belkasoft Evidence Center</u>, are available for this purpose.
 
 ## Formatted Hard Drives: Unraveling File System Structures
 
