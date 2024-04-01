@@ -49,7 +49,7 @@ toc: true
 
    The deletion of files leaves behind digital footprints that can be traced and reconstructed using specialized tools and techniques. Tools like <u>Recuva</u> and <u>PhotoRec</u> facilitate the recovery of deleted files by scanning storage media for remnants of data clusters and file headers. 
 
-  ![error](/assets/images/digital-forensics/recovering_digital-evidence/rec_photo.png)
+  ![error](/assets/images/digital-forensics/recovering_digital-evidence/rec_photo_.png)
 
    Forensic experts utilize file system journaling and metadata analysis to pinpoint and restore deleted files, meticulously reconstructing digital trails with precision and accuracy. **file system record storing the exact location of the deleted file on the disk is being marked as deleted and the disk space previously occupied by the deleted file is then labeled as available – but not overwritten with zeroes or other data.** 
 
