@@ -4,7 +4,7 @@ classes: wide
 header:
   teaser: /assets/images/digital-forensics/Browser_Artifacts_pic/hindsight_gui.png
 ribbon:
-description: "provide detailed insights into a user’s online activities and behaviors."
+description: "Provide detailed insights into a user’s online activities and behaviors."
 categories:
   - Digital_forensics
 toc: true
@@ -12,7 +12,7 @@ toc: true
 
 
 
-# WINDOWS BROWSERS ARTIFACTS 
+# Windows Browser Artifacts 
 
    Browser artifacts encompass a variety of data types stored by web browsers, including navigation history, bookmarks, and cache data. These artifacts are saved in specific directories within the operating system. While the exact locations and names of these directories vary across different browsers, the types of data stored are generally consistent.
     Here’s an overview of the most common browser artifacts:
@@ -34,7 +34,6 @@ toc: true
 
 ## GOOGLE CHROME ARTIFACTS 
   Google Chrome stores user profiles in specific locations based on the operating system: 
-
   • **Linux:** `~/.config/google-chrome/`
   • **Windows:** `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\`
   • **MacOS:** `/Users/$USER/Library/Application Support/Google/Chrome/`
@@ -47,43 +46,52 @@ toc: true
 
  
    **Cookies:** Stores cookie data. The ChromeCookiesView tool can be used to inspect these files.
+   
     `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\Default\Cookies`
     `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Cookies`
 
    **Cache:** Contains cached data. Windows users can use ChromeCacheView to inspect this information.
+   
     `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Cache`
     `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Cache`
 
    **Bookmarks:** Contains user bookmarks.
+   
     `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Bookmarks`
     `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Bookmarks`
 
    **Web Data:** Stores form history data.
    
    **Favicons:** Stores website favicons.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Favicons`
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Favicons`
 
    **Login Data:** Contains login credentials, including usernames and passwords.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Login Data`
 
    **Current Session/Current Tabs:** Stores data about the current browsing session and open tabs.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Current Session`
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Current Session`
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Current Tabs`
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Current Tabs`
 
    **Last Session/Last Tabs:** Contains information about the sites that were active during the last session before Chrome was closed.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Last Session`
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Last Session`
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Last Tabs`
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Last Tabs`
 
-   **Extensions:** Stores data for browser extensions and addons.
+   **Extensions:** Stores data for browser extensions and add-ons.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\Default\Extensions\`
        `C:\Users\XXX\AppData\Local\Google\Chrome\UserData\ChromeDefaultData\Extensions\`
 
    **Thumbnails:** Contains website thumbnails.
+   
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Top Sites`
        `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\Default\Thumbnails` (Older versions)
 
@@ -95,13 +103,13 @@ toc: true
    Hindsight is a free tool designed for analyzing web artifacts. Initially focused on the browsing history of the Google Chrome web browser, it has since expanded to support other Chromium-based applications, with more support expected in the future. Hindsight can parse a variety of web artifacts, including:
 
    - URLs
-   - Download history
+   - Download History
    - Cache records
    - Bookmarks
    - Autofill records
    - Saved passwords
    - Preferences
-   - Browser extensions
+   - Browser Extensions
    - HTTP cookies
    - Local Storage records (HTML5 cookies)
    - Once data is extracted from each file, Hindsight correlates it with data from other history files and organizes it into a timeline.
@@ -125,9 +133,10 @@ you'll be taken to the results page in where you can save the results to a sprea
 ## FIREFOX ARTIFACT
   
   Firefox organizes user data within profiles, stored in specific locations based on the operating system:
-    • **Linux:**   `~/.mozilla/firefox/`
-    • **MacOS:**   `/Users/$USER/Library/Application Support/Firefox/Profiles/`
-    • **Windows:** `%userprofile%\AppData\Roaming\Mozilla\Firefox\Profiles\`
+  
+   • **Linux:**   `~/.mozilla/firefox/`
+   • **MacOS:**   `/Users/$USER/Library/Application Support/Firefox/Profiles/`
+   • **Windows:** `%userprofile%\AppData\Roaming\Mozilla\Firefox\Profiles\`
  
   Within each profile folder, several important files can be found:
   
@@ -137,6 +146,7 @@ you'll be taken to the results page in where you can save the results to a sprea
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\bookmarkbackup\`
   
   **formhistory.sqlite:** Stores web form data.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\formhistory.sqlite`
   
   **handlers.json:** Manages protocol handlers.
@@ -144,30 +154,39 @@ you'll be taken to the results page in where you can save the results to a sprea
   **persdict.dat:** Contains custom dictionary words.
   
   **addons.json and extensions.sqlite:** Hold information on installed add-ons and extensions.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\addons.sqlite`
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\extensions.sqlite`
 
   **cookies.sqlite:** Stores cookies, and can be inspected using MZCookiesView on Windows.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\cookies.sqlite`
 
   **cache2/entries or startupCache:** Contains cache data, which can be accessed through tools like MozillaCacheView.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\cookies.sqlite`
 
   **favicons.sqlite:** Stores favicons.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\favicons.sqlite`
 
   **prefs.js:** Contains user settings and preferences.
 
   **downloads.sqlite:** An older downloads database, now integrated into places.sqlite.
+  
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\downloads.sqlite`
 
   **thumbnails:** Stores website thumbnails.
+  
     `C:\Users\XXX\AppData\Local\Mozilla\Firefox\Profiles\[profileID].default\thumbnails`
   
   **logins.json:** Contains encrypted login information.
+  
    Logins:
+   
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\logins.json`
    Passwords: 
+   
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\key4.db`
     `C:\Users\XXX\AppData\Roaming\Mozilla\Firefox\Profiles\[profileID].default\key3.db (Older Version)`
 
@@ -184,11 +203,13 @@ you'll be taken to the results page in where you can save the results to a sprea
 
   **Cache Inspection**
    The IECacheView tool allows for the inspection of cache data, requiring the folder location where cache data is stored. Cache metadata includes:
+   
    - Filename
    - Directory
    - Access count
    - URL origin
     Timestamps for cache creation, access, modification, and expiry
+
   
   **Cookies Management**
    Cookies can be examined using IECookiesView. Cookie metadata includes:
@@ -217,6 +238,7 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
 
   **Typed URLs**
    Typed URLs and their usage timings are stored in the registry under NTUSER.DAT at the following paths:
+   
     - `Software\Microsoft\Internet Explorer\TypedURLs`
     - `Software\Microsoft\Internet Explorer\TypedURLsTime`
    These registry entries track the last 50 URLs entered by the user along with their last input times.
@@ -225,11 +247,17 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
 
 ## MICROSOFT EDGE ARTIFACTS 
   Microsoft Edge stores user data in %userprofile%\Appdata\Local\Packages. The paths for various data types are:
-   Profile Path: `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC`
-   History, Cookies, and Downloads: `C:\Users\XX\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat`
-   Settings, Bookmarks, and Reading List: `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\XXX\DBStore\spartan.edb`
-   Cache: `C:\Users\XXX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC#!XXX\MicrosoftEdge\Cache`
-   Last Active Sessions: `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\Recovery\Active`
+  
+   Profile Path: 
+   `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC`
+   History, Cookies, and Downloads:
+   `C:\Users\XX\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat`
+   Settings, Bookmarks, and Reading List:
+   `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\XXX\DBStore\spartan.edb`
+   Cache:
+   `C:\Users\XXX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC#!XXX\MicrosoftEdge\Cache`
+   Last Active Sessions: 
+   `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\Recovery\Active`
 
 
 ## SAFARI ARTIFACTS 
