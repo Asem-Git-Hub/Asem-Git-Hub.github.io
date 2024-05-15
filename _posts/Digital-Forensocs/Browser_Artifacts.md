@@ -17,18 +17,29 @@ toc: true
    Browser artifacts encompass a variety of data types stored by web browsers, including navigation history, bookmarks, and cache data. These artifacts are saved in specific directories within the operating system. While the exact locations and names of these directories vary across different browsers, the types of data stored are generally consistent.
     Here’s an overview of the most common browser artifacts:
 
-   **Navigation History:** Logs the websites a user has visited, which is useful for identifying access to potentially harmful sites.
-   **Autocomplete Data:** Provides suggestions based on frequent searches, offering valuable insights when analyzed alongside navigation history.
-   **Bookmarks:** Sites saved by the user for quick and easy access.
-   **Extensions and Add-ons:** Includes any browser extensions or add-ons installed by the user.
-   **Cache:** Stores web content such as images and JavaScript files to speed up website loading times. This data can be particularly valuable for forensic analysis.
-   **Logins:** Contains stored login credentials for various websites.
-   **Favicons:** Small icons associated with websites, which appear in tabs and bookmarks, providing additional information about user visits.
-   **Browser Sessions:** Information related to open browser sessions.
-   **Downloads:** Keeps records of files downloaded via the browser.
-   **Form Data:** Information entered into web forms, saved to facilitate future autofill suggestions.
-   **Thumbnails:** Preview images of websites.
-   **Custom Dictionary.txt:** Contains words added by the user to the browser's dictionary.
+   ***Navigation History:*** Logs the websites a user has visited, which is useful for identifying access to potentially harmful sites.
+   
+   ***Autocomplete Data:*** Provides suggestions based on frequent searches, offering valuable insights when analyzed alongside navigation history.
+   
+   ***Bookmarks:*** Sites saved by the user for quick and easy access.
+   
+   ***Extensions and Add-ons:*** Includes any browser extensions or add-ons installed by the user.
+   
+   ***Cache:*** Stores web content such as images and JavaScript files to speed up website loading times. This data can be particularly valuable for forensic analysis.
+  
+   ***Logins:*** Contains stored login credentials for various websites.
+  
+   ***Favicons:*** Small icons associated with websites, which appear in tabs and bookmarks, providing additional information about user visits.
+  
+   ***Browser Sessions:*** Information related to open browser sessions.
+  
+   ***Downloads:*** Keeps records of files downloaded via the browser.
+  
+   ***Form Data:*** Information entered into web forms, saved to facilitate future autofill suggestions.
+   
+   ***Thumbnails:*** Preview images of websites.
+  
+   ***Custom Dictionary.txt:*** Contains words added by the user to the browser's dictionary.
    These artifacts can be crucial in forensic investigations, as they provide detailed insights into a user’s online activities and behaviors.
 
 
