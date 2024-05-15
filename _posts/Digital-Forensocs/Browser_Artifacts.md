@@ -32,7 +32,7 @@ toc: true
    These artifacts can be crucial in forensic investigations, as they provide detailed insights into a user’s online activities and behaviors.
 
 
-## GOOGLE CHROME ARTIFACTS 
+## Google Chrome Artifacts 
   Google Chrome stores user profiles in specific locations based on the operating system: 
   
   • **Linux:** `~/.config/google-chrome/`
@@ -101,7 +101,7 @@ toc: true
    **Preferences:** A file that contains a wealth of information, including settings for plugins, extensions, pop-ups, notifications, and more.
    These files are crucial for understanding user activity and behavior, making them valuable for forensic investigations.
 
-### HINDSIGHT TOOL 
+### Hindsight Tool 
 
    Hindsight is a free tool designed for analyzing web artifacts. Initially focused on the browsing history of the Google Chrome web browser, it has since expanded to support other Chromium-based applications, with more support expected in the future. Hindsight can parse a variety of web artifacts, including:
 
@@ -133,7 +133,7 @@ you'll be taken to the results page in where you can save the results to a sprea
   ![error](/assets/images/digital-forensics/Browser_Artifacts_pic/spreadsheet.png)
 
 
-## FIREFOX ARTIFACT
+## Firefox Artifacts
   
   Firefox organizes user data within profiles, stored in specific locations based on the operating system:
   
@@ -200,7 +200,7 @@ you'll be taken to the results page in where you can save the results to a sprea
 
 
 
-## INTERNET EXPLORER ARTIFACTS 
+## Internet Explorer Artifacts 
 
   Internet Explorer 11 organizes its data and metadata across various locations to facilitate easy access and management of stored information and corresponding details.
   Metadata Storage
@@ -250,7 +250,7 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
    These data and metadata storage practices allow for detailed analysis and management of user activities, aiding forensic investigations and user data management.
 
 
-## MICROSOFT EDGE ARTIFACTS 
+## MICROSOFT EDGE Artifacts 
   Microsoft Edge stores user data in %userprofile%\Appdata\Local\Packages. The paths for various data types are:
   
    Profile Path: 
@@ -274,7 +274,7 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
    `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\Recovery\Active`
 
 
-## SAFARI ARTIFACTS 
+## SAFARI Artifacts 
 
   **Safari Data Storage**
   
@@ -296,7 +296,7 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
    These files are crucial for analyzing user activity and behavior within Safari, making them valuable for both forensic investigations and user data management.
 
 
-# TOOLS FOR PERFORMING BROWSER FORENSICS
+# Tools For Performing Browser Forensics
 
    Here is a list of tools that can be used to perform browser forensics, along with their primary functions:
 
