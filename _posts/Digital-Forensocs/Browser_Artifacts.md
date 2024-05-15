@@ -34,8 +34,11 @@ toc: true
 
 ## GOOGLE CHROME ARTIFACTS 
   Google Chrome stores user profiles in specific locations based on the operating system: 
+  
   • **Linux:** `~/.config/google-chrome/`
+  
   • **Windows:** `C:\Users\XXX\AppData\Local\Google\Chrome\User Data\`
+  
   • **MacOS:** `/Users/$USER/Library/Application Support/Google/Chrome/`
 
    Within these directories, most user data is typically found in the Default/ or ChromeDefaultData/ folders. The following files contain significant data:
