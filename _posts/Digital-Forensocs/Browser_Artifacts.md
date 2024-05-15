@@ -138,7 +138,9 @@ you'll be taken to the results page in where you can save the results to a sprea
   Firefox organizes user data within profiles, stored in specific locations based on the operating system:
   
    • **Linux:**   `~/.mozilla/firefox/`
+   
    • **MacOS:**   `/Users/$USER/Library/Application Support/Firefox/Profiles/`
+   
    • **Windows:** `%userprofile%\AppData\Roaming\Mozilla\Firefox\Profiles\`
  
   Within each profile folder, several important files can be found:
@@ -252,20 +254,30 @@ History files are located in %userprofile%\Appdata\Local\Microsoft\Windows\Histo
   Microsoft Edge stores user data in %userprofile%\Appdata\Local\Packages. The paths for various data types are:
   
    Profile Path: 
+   
    `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC`
+ 
    History, Cookies, and Downloads:
+   
    `C:\Users\XX\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat`
+  
    Settings, Bookmarks, and Reading List:
+   
    `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\XXX\DBStore\spartan.edb`
+ 
    Cache:
+   
    `C:\Users\XXX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC#!XXX\MicrosoftEdge\Cache`
+  
    Last Active Sessions: 
+   
    `C:\Users\XX\AppData\Local\Packages\Microsoft.MicrosoftEdge_XXX\AC\MicrosoftEdge\User\Default\Recovery\Active`
 
 
 ## SAFARI ARTIFACTS 
 
   **Safari Data Storage**
+  
    Safari stores its data in the `/Users/$User/Library/Safari` directory. The key files and their contents include:
 
    **History.db:** Contains the history_visits and history_items tables, which store URLs and visit timestamps. You can query this database using sqlite3.
