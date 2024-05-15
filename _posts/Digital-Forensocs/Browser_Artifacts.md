@@ -6,7 +6,7 @@ header:
 ribbon:
 description: "Provide detailed insights into a user’s online activities and behaviors."
 categories:
-  - Digital_forensics
+  - Digital-Forensics
 toc: true
 ---
 
