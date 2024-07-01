@@ -1,4 +1,3 @@
-
 ---
 title: " Memory Forensics With Volatility Tool "
 classes: wide
@@ -10,8 +9,6 @@ categories:
   - digital-forensics
 toc: true
 ---
-
-
 
 # Introduction to Memory Analysis
 
