@@ -100,7 +100,7 @@ Memory forensics is crucial in digital investigations because it allows forensic
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/voly_version.png)
 
 
-   Next, we need to obtain a memory image. I'll navigate to a folder on my Desktop named "memory_image," where I'll analyze the "Cyber5w_CTF.mem" image file.
+   - Next, we need to obtain a memory image. I'll navigate to a folder on my Desktop named "memory_image," where I'll analyze the "Cyber5w_CTF.mem" image file.
 
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/mem_location.png)
@@ -108,17 +108,17 @@ Memory forensics is crucial in digital investigations because it allows forensic
 
 ## GET RAM IMAGE INFO
    
-   So, first, I need to locate the directory of my memory image. Then, typically, the initial step involves running the command:
+   - So, first, I need to locate the directory of my memory image. Then, typically, the initial step involves running the command:
 
    `python .\vol.py -f C:\Users\Sky-Fall\Desktop\memory_image\Cyber5w_CTF.mem`
   
-   This command specifies the memory image file using the `-f` option. Following that, to gather information about this memory image, I'll execute: `windows.info`
+   - This command specifies the memory image file using the `-f` option. Following that, to gather information about this memory image, I'll execute: `windows.info`
    This will provide details and insights specific to the memory image being analyzed.
  
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/memory_info_.png)
 
-   Volatility 3 operates differently in specifying plugins at the end of the command. For example, when analyzing a Windows memory image and seeking information about the Windows system, the command structure typically involves specifying the plugin at the end. I'll demonstrate how to use this as a filter shortly. Let's proceed with running the command.
+   - Volatility 3 operates differently in specifying plugins at the end of the command. For example, when analyzing a Windows memory image and seeking information about the Windows system, the command structure typically involves specifying the plugin at the end. I'll demonstrate how to use this as a filter shortly. Let's proceed with running the command.
  
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/scanning.png)
@@ -130,7 +130,7 @@ Memory forensics is crucial in digital investigations because it allows forensic
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/windows_info.png)
 
    
-   If I wanted to run the same command and save the output, I would use a greater-than sign `>` to redirect the output to a file named **Cyber5w_CTF.mem.info.txt**. This allows me to capture and store the information obtained from the command in a text file for future reference or analysis.
+   - If I wanted to run the same command and save the output, I would use a greater-than sign `>` to redirect the output to a file named **Cyber5w_CTF.mem.info.txt**. This allows me to capture and store the information obtained from the command in a text file for future reference or analysis.
  
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/info_output.png)
@@ -414,7 +414,7 @@ Memory forensics is crucial in digital investigations because it allows forensic
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/userassist.png)
 
 
-   So, I'm just going to run this again with more  
+   - So, I'm just going to run this again with more  
 
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/user_assist.png)
