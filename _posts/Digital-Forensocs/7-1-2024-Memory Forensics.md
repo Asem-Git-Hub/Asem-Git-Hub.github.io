@@ -288,30 +288,30 @@ Memory forensics is crucial in digital investigations because it allows forensic
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/mkdir.png)
 
 
-    - okay so now I've created a folder called dump and that's where I'm going to save everything that I'm carving out of this memory image we can go back to our volatility command and I need to do -o to specify the output directory I'm going to say save it into the dump folder and then I'm going to use the command windows.dumpfile and then I'm going to specify the PID of 1328 which is our chrome process and in that chrome process, I have the virtual address that we just copied.. 
+  - okay so now I've created a folder called dump and that's where I'm going to save everything that I'm carving out of this memory image we can go back to our volatility command and I need to do -o to specify the output directory I'm going to say save it into the dump folder and then I'm going to use the command windows.dumpfile and then I'm going to specify the PID of 1328 which is our chrome process and in that chrome process, I have the virtual address that we just copied.. 
   
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/dumpfile.png)
 
 
-    - A file was created the history.dat and we see the history.dat file was created here
+  - A file was created the history.dat and we see the history.dat file was created here
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/file_dat.png)
 
  
-    - At the beginning of this, we see SQL lite format 3 which means this is a sqlite file probably.
+  - At the beginning of this, we see SQL lite format 3 which means this is a sqlite file probably.
  
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/sqile.png)
 
 
-    - we see some URLs we see some information so actually this does look like a Chrome history file 
+  - we see some URLs we see some information so actually this does look like a Chrome history file 
 
 
    ![error](/assets/images/digital-forensics/Memory_forensics_pic/chrome_his.png)
 
 
-    - I'll now use an SQLite viewer to inspect the file since I know it's in SQLite format. This is how we pinpoint specific files within a process and directly extract them from memory using the Windows dump file command with our PID, providing the virtual file address and the output directory.
+  - I'll now use an SQLite viewer to inspect the file since I know it's in SQLite format. This is how we pinpoint specific files within a process and directly extract them from memory using the Windows dump file command with our PID, providing the virtual file address and the output directory.
 
 ## CHECK EXECUTABLE RUN OPTIONS 
    
