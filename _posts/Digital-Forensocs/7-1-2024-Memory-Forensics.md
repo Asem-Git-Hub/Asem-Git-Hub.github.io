@@ -1,10 +1,10 @@
 ---
-title: " "
+title: " Memory Forensics With Volatility Tool "
 classes: wide
 header:
-  teaser: /assets/images/digital-forensics/Memory_forensics_pic/.png
+  teaser: /assets/images/digital-forensics/Memory_forensics_pic/main.png
 ribbon:
-description: " "
+description: " Volatility is an incredibly powerful tool for memory forensics, capable of extracting information from memory images (memory dumps) of Windows, macOS, and Linux systems. It boasts a vast community contributing third-party plugins, enhancing its functionality. Incorporating memory acquisition and analysis into your investigations is crucial, and Volatility should be a staple in your forensic toolkit."
 categories:
   - digital-forensics
 toc: true
