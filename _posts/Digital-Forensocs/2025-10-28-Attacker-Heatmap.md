@@ -4,7 +4,7 @@ classes: wide
 header:
   teaser: /assets/images/digital-forensics/attacker-heatmap/mitre-attack.png
 ribbon:
-description: " Create a full picture of building a strong detection environment based on the attacker's behavior.
+description: " Create a full picture of building a strong detection environment based on the attacker's behavior."
 categories:
   - digital-forensics
 toc: true
@@ -196,6 +196,7 @@ For creating the heatmap, we should use MITER, We are going to use a tool from M
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
+
 
 
 
