@@ -10,14 +10,14 @@ categories:
 toc: true
 ---
 
-As a detection engineering, our job is based on SOC-CMM Framework separated into two main categories:
+As a detection engineering, our job is based on the SOC-CMM Framework, separated into two main categories:
 
 1- Use Case Management   
 2- Detection Engineering & Validation
 
 We will discuss use case management, which is responsible for creating threat profiling for the organization (the client in the MSSP context) and other responsibilities. However, we will now focus on threat profiling.
 
-[Threat intelligence plays an important role in identifying the attackers that are most relevant]
+[Threat intelligence plays an important role in identifying the most relevant attackers]
 
 ## Threat Profiling
 
@@ -31,7 +31,7 @@ operational: which is responsible for how many of them is active and what sector
 
 tactical: here we are focusing on which TTPs(tactics, techniques, and procedures) are used by the attacker and giving it a score based on opertional stage(in our case, activity and sectors).
 
-So, what is the score? score is a number we give to techniques as a priority to which one should focus on first in our detection rules and playbooks, trying to cover every possible technique from the highest one to the lowest.
+So, what is the score? The score is a number we give to techniques as a priority to which one should focus on first in our detection rules and playbooks, trying to cover every possible technique from the highest one to the lowest.
 
 ## Example
 
@@ -196,6 +196,7 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
+
 
 
 
