@@ -1,5 +1,5 @@
 ---
-title: " Attacker Heatmap "
+title: " Attacker Heatmap"
 classes: wide
 header:
   teaser: /assets/images/digital-forensics/attacker-heatmap/mitre-attack.png
@@ -190,12 +190,13 @@ After we gather this information can now go to the theired step, which is tectic
 
 
 
-For creating the heatmap, we should use MITRE., We are going to use a tool from MITRE called [Attack Navigator](https://mitre-attack.github.io/attack-navigator/),
+For creating the heatmap, we should use MITER, We are going to use a tool from MITRE called [Attack Navigator](https://mitre-attack.github.io/attack-navigator/).
 
 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
+
 
 
 
