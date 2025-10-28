@@ -1,3 +1,4 @@
+
 ---
 title: " Attacker Heatmap "
 classes: wide
@@ -196,6 +197,7 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
+
 
 
 
