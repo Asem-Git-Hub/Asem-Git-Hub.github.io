@@ -15,7 +15,7 @@ Detection engineering is a specialized cybersecurity focused on the structured p
 
 ## Detection Engineering Lifecycle
 
-detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
+Detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
 
 
 Security teams begin by identifying and prioritizing threats that matter most to their organization. They often use frameworks like MITRE ATT&CK to map out attacker techniques and understand how these behaviors might appear in their environment. 
@@ -206,6 +206,7 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
+
 
 
 
