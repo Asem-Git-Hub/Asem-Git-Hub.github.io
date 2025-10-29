@@ -1,5 +1,5 @@
 ---
-title: " Attacker Heatmap"
+title: " Attacker Heatmap "
 classes: wide
 header:
   teaser: /assets/images/digital-forensics/attacker-heatmap/mitre-attack.png
@@ -10,14 +10,31 @@ categories:
 toc: true
 ---
 
-As a detection engineering, our job is based on the SOC-CMM Framework, separated into two main categories:
 
-1- Use Case Management   
-2- Detection Engineering & Validation
+Detection engineering is a specialized cybersecurity focused on the structured process of designing, implementing, testing and maintaining detection logic that identifies malicious activity in an environment. 
 
-We will discuss use case management, which is responsible for creating threat profiling for the organization (the client in the MSSP context) and other responsibilities. However, we will now focus on threat profiling.
+## Detection Engineering Lifecycle
 
-[Threat intelligence plays an important role in identifying the most relevant attackers]
+detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
+
+
+Security teams begin by identifying and prioritizing threats that matter most to their organization. They often use frameworks like MITRE ATT&CK to map out attacker techniques and understand how these behaviors might appear in their environment. 
+
+By comparing their existing detections against this framework, teams can perform a gap analysis to find where they are blind areas where attacks could go unnoticed. This process results in a clear set of prioritized detection use cases and well defined analytic requirements focused on real attacker behavior.
+
+To ensure these detections are well structured, teams map their detection rules to the MITRE ATT&CK. This mapping not only highlights missing techniques but also helps decide which new detections should be built first based on their relevance and potential impact.
+
+All of this work fits within the SOC-CMM Framework, which measures a Security Operations Center’s performance through two main aspects: capability and maturity.
+
+Capability represents the skills, tools, and processes that a SOC has in place, while maturity measures how consistent, repeatable, and optimized those processes are. Detection engineers use this framework to assess how well the SOC can detect and respond to threats.
+
+Within a SOC, two main components drive this process: Use Case Management and Detection Engineering & Validation. Both are important for strong detection.
+
+Use Case Management focuses on creating and maintaining the security scenarios that guide monitoring. This begins with Threat Profiling, where analysts identify potential threats by studying organizational assets, known vulnerabilities, and possible attacker behaviors.
+
+Each use case is then mapped to security frameworks like MITRE ATT&CK or NIST to ensure standardization and better tracking. After that, Prioritization helps determine which use cases are most critical based on factors like risk, impact. 
+
+[Threat intelligence plays an important role in identifying the attackers that are most relevant]
 
 ## Threat Profiling
 
@@ -31,19 +48,14 @@ operational: which is responsible for how many of them is active and what sector
 
 tactical: here we are focusing on which TTPs(tactics, techniques, and procedures) are used by the attacker and giving it a score based on opertional stage(in our case, activity and sectors).
 
-So, what is the score? The score is a number we give to techniques as a priority to which one should focus on first in our detection rules and playbooks, trying to cover every possible technique from the highest one to the lowest.
+So, what is the score? That score is a priority number we use to decide which techniques to cover first when writing detection rules and playbooks, so we start with the highest-scored techniques and work down until we have reasonable coverage.
 
 ## Example
 
 
-
 Our program is focusing on the targeted jordan government and telecommunications.
 
-
-
 We are beginning with strategic and operational as we discussed.
-
-
 
 By Using [ETDA](https://apt.etda.or.th/cgi-bin/aptsearch.cgi), [APTMAP](https://andreacristaldi.github.io/APTmap/) and [Exel sheat](https://docs.google.com/spreadsheets/d/1H9_xaxQHpWaa4O_Son4Gx0YOIzlcBWMsdvePFX68EKU/edit?gid=1636225066#gid=1636225066)
 
@@ -52,8 +64,6 @@ By Using [ETDA](https://apt.etda.or.th/cgi-bin/aptsearch.cgi), [APTMAP](https://
 We can get:   
 
 All groups targeting Jordan and targeting the sector Telecommunications and government (using ETDR)
-
-
 
 ```
 
@@ -190,17 +200,12 @@ After we gather this information can now go to the theired step, which is tectic
 
 
 
-For creating the heatmap, we should use MITER, We are going to use a tool from MITRE called [Attack Navigator](https://mitre-attack.github.io/attack-navigator/).
+For creating the heatmap, we should use MITRE., We are going to use a tool from MITRE called [Attack Navigator](https://mitre-attack.github.io/attack-navigator/),
 
 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
-
-
-
-
-
 
 
 
