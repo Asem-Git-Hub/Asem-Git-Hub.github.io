@@ -24,23 +24,23 @@ All of this work fits within the SOC-CMM Framework, which measures a Security Op
 
 ## Detection Engineering Lifecycle
 
-detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
+detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services, and applications.
 
 
 Security teams begin by identifying and prioritizing threats that matter most to their organization. They often use frameworks like MITRE ATT&CK to map out attacker techniques and understand how these behaviors might appear in their environment. 
 
-By comparing their existing detections against this framework, teams can perform a gap analysis to find where they are blind areas where attacks could go unnoticed. This process results in a clear set of prioritized detection use cases and well defined analytic requirements focused on real attacker behavior.
+By comparing their existing detections against this framework, teams can perform a gap analysis to find where they are blind areas where attacks could go unnoticed. This process results in a clear set of prioritized detection use cases and well-defined analytic requirements focused on real attacker behavior.
 
 Within a SOC, two main components drive this process: <u>Use Case Management and Detection Engineering & Validation. Both are important for strong detection.</u>
 
-Use Case Management focuses on creating and maintaining the security scenarios that guide monitoring. This begins with Threat Profiling, where analysts identify potential threats by studying organizational assets, known vulnerabilities, and possible attacker behaviors.
+Use Case Management focuses on creating and maintaining the security scenarios that guide monitoring. This begins with Threat Profiling, where analysts identify potential threats by studying attacker behaviors.
 
 ![error](/assets/images/Detection-Engineer/attacker-heatmap/use-case.png)
 
 
 Each use case is then mapped to security frameworks like MITRE ATT&CK or NIST to ensure standardization and better tracking. After that, Prioritization helps determine which use cases are most critical based on factors like risk, impact. 
 
-[Threat intelligence plays an important role in identifying the attackers that are most relevant]
+[Threat intelligence plays an important role in identifying the most relevant attackers]
 
 ## Threat Profiling
 
@@ -212,6 +212,7 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/Detection-Engineer/attacker-heatmap/mitre-attack.png)
+
 
 
 
