@@ -10,27 +10,33 @@ categories:
 toc: true
 ---
 
-
+# Detection Engineer
 Detection engineering is a specialized cybersecurity focused on the structured process of designing, implementing, testing and maintaining detection logic that identifies malicious activity in an environment. 
+
+To ensure these detections are well structured, teams map their detection rules to the **MITRE ATT&CK**. This mapping not only highlights missing techniques but also helps decide which new detections should be built first based on their relevance and potential impact.
+
+All of this work fits within the SOC-CMM Framework, which measures a Security Operations Center’s performance through two main aspects: **capability and maturity.**
+
+**Capability** represents the skills, tools, and processes that a SOC has in place, while **maturity** measures how consistent, repeatable, and optimized those processes are. Detection engineers use this framework to assess how well the SOC can detect and respond to threats.
+
+![error](/assets/images/digital-forensics/attacker-heatmap/soc-cmm.png)
+
 
 ## Detection Engineering Lifecycle
 
-Detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
+detection begins by collecting and centralizing logs from endpoints, servers, networks, cloud services and applications.
 
 
 Security teams begin by identifying and prioritizing threats that matter most to their organization. They often use frameworks like MITRE ATT&CK to map out attacker techniques and understand how these behaviors might appear in their environment. 
 
 By comparing their existing detections against this framework, teams can perform a gap analysis to find where they are blind areas where attacks could go unnoticed. This process results in a clear set of prioritized detection use cases and well defined analytic requirements focused on real attacker behavior.
 
-To ensure these detections are well structured, teams map their detection rules to the MITRE ATT&CK. This mapping not only highlights missing techniques but also helps decide which new detections should be built first based on their relevance and potential impact.
-
-All of this work fits within the SOC-CMM Framework, which measures a Security Operations Center’s performance through two main aspects: capability and maturity.
-
-Capability represents the skills, tools, and processes that a SOC has in place, while maturity measures how consistent, repeatable, and optimized those processes are. Detection engineers use this framework to assess how well the SOC can detect and respond to threats.
-
-Within a SOC, two main components drive this process: Use Case Management and Detection Engineering & Validation. Both are important for strong detection.
+Within a SOC, two main components drive this process: <u>Use Case Management and Detection Engineering & Validation. Both are important for strong detection.</u>
 
 Use Case Management focuses on creating and maintaining the security scenarios that guide monitoring. This begins with Threat Profiling, where analysts identify potential threats by studying organizational assets, known vulnerabilities, and possible attacker behaviors.
+
+![error](/assets/images/digital-forensics/attacker-heatmap/use-case.png)
+
 
 Each use case is then mapped to security frameworks like MITRE ATT&CK or NIST to ensure standardization and better tracking. After that, Prioritization helps determine which use cases are most critical based on factors like risk, impact. 
 
@@ -42,11 +48,11 @@ We know that we are going to explain how we can make the attacker suffer and tak
 
 threat profiling, which is also known as attacker heatmap, separated into:
 
-Strategic: which is responsible for gathering information about any threat actors interested in our client
+**Strategic:** which is responsible for gathering information about any threat actors interested in our client
 
-operational: which is responsible for how many of them is active and what sector intersted in.
+**operational:** which is responsible for how many of them is active and what sector intersted in.
 
-tactical: here we are focusing on which TTPs(tactics, techniques, and procedures) are used by the attacker and giving it a score based on opertional stage(in our case, activity and sectors).
+**tactical:** here we are focusing on which TTPs(tactics, techniques, and procedures) are used by the attacker and giving it a score based on opertional stage(in our case, activity and sectors).
 
 So, what is the score? That score is a priority number we use to decide which techniques to cover first when writing detection rules and playbooks, so we start with the highest-scored techniques and work down until we have reasonable coverage.
 
@@ -206,7 +212,6 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/digital-forensics/attacker-heatmap/mitre-attack.png)
-
 
 
 
