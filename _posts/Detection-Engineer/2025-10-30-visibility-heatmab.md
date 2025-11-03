@@ -11,7 +11,7 @@ toc: true
 ---
 # Building on the Attacker Heat Map
 
-After understanding how an [Attacker-Heatmap](https://asem-git-hub.github.io/digital-forensics/Attacker-Heatmap/), map helps visualize threat actor behavior across different MITRE ATT&CK techniques, the next step is developing a **visibility-Heatmap**.
+After understanding how an [Attacker-Heatmap](https://asem-git-hub.github.io/digital-forensics/Attacker-Heatmap/) helps visualize threat actor behavior across different MITRE ATT&CK techniques, the next step is developing a **visibility-Heatmap**.
 
 While the attacker heat map focuses on what the threat actor does, the <u>visibility heat map focuses on what you can actually see and detect in your environment.</u> 
 
@@ -164,6 +164,7 @@ Once you visualize the JSON in MITRE Navigator, you’ll get a color-coded visib
 
 **Building a Visibility Heat Map bridges the gap between theory and operational defense.
 By combining attacker behaviors (from the attacker heat map) with your telemetry reality (from DeTT&CT analysis), you create a strategic detection roadmap.**
+
 
 
 
