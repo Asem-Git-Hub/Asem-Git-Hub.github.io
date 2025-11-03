@@ -140,7 +140,7 @@ We can add data Manually by the DeTT&CT Web Editor ( or just uploud the yaml fil
 5- Repeat for all the data sources you’ve collected from the client.
 6- When done, click **Export YAML** to download the generated configuration file.
 
-![error](/assets/images/Detection-Engineer/visibility-pic/dettect.png)
+![error](/assets/images/Detection-Engineer/Visibility-pic/dettect.png)
 
 
 # MITRE ATT&CK Navigator
@@ -164,4 +164,5 @@ Once you visualize the JSON in MITRE Navigator, you’ll get a color-coded visib
 
 **Building a Visibility Heat Map bridges the gap between theory and operational defense.
 By combining attacker behaviors (from the attacker heat map) with your telemetry reality (from DeTT&CT analysis), you create a strategic detection roadmap.**
+
 
