@@ -6,7 +6,7 @@ header:
 ribbon:
 description: " Create a full picture of building a strong detection environment based on the attacker's behavior."
 categories:
-  - digital-forensics
+  - Detection-Engineer
 toc: true
 ---
 
@@ -212,6 +212,7 @@ For creating the heatmap, we should use MITRE., We are going to use a tool from 
 based on the score we gave to the techniques from all APTs and collected all of them in one heat map, this is the final one. 
 
   ![error](/assets/images/Detection-Engineer/attacker-heatmap/mitre-attack.png)
+
 
 
 
