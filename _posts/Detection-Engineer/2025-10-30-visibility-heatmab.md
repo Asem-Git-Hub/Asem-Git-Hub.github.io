@@ -2,7 +2,7 @@
 title: " Visibility Heatmap "
 classes: wide
 header:
-  teaser: /assets/images/Detection-Engineer/Visibility-pic/mitre-attack.png
+  teaser: /assets/images/Detection-Engineer/Visibility-pic/dettect.png
 ribbon:
 description: " visibility heat map that shows which ATT&CK techniques your current data sources can detect and more importantly, which ones you can’t."
 categories:
@@ -164,6 +164,7 @@ Once you visualize the JSON in MITRE Navigator, you’ll get a color-coded visib
 
 **Building a Visibility Heat Map bridges the gap between theory and operational defense.
 By combining attacker behaviors (from the attacker heat map) with your telemetry reality (from DeTT&CT analysis), you create a strategic detection roadmap.**
+
 
 
 
