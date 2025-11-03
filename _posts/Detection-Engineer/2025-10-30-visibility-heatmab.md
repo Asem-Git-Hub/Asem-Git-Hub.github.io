@@ -140,7 +140,7 @@ We can add data Manually by the DeTT&CT Web Editor ( or just uploud the yaml fil
 5- Repeat for all the data sources you’ve collected from the client.
 6- When done, click **Export YAML** to download the generated configuration file.
 
-![error](/assets/images/Detection-Engineer/visibility-heatmap/Visibility-pic/dettect.png)
+![error](/assets/images/Detection-Engineer/visibility-pic/dettect.png)
 
 
 # MITRE ATT&CK Navigator
@@ -156,11 +156,12 @@ python3 dettect.py ds -fd '/home/kali/Downloads/data-sources-new.yaml' -l
 **-l** - prints the list of all MITRE ATT&CK Data Sources + related Techniques that match what you provided.
 
 
-![error](/assets/images/Detection-Engineer/visibility-heatmap/Visibility-pic/mitre-nav.png)
+![error](/assets/images/Detection-Engineer/Visibility-pic/mitre-nav.png)
 
 Once you visualize the JSON in MITRE Navigator, you’ll get a color-coded visibility heat map that shows which ATT&CK techniques your current data sources can detect and more importantly, which ones you can’t. 
 
-![error](/assets/images/Detection-Engineer/visibility-heatmap/Visibility-pic/mitre-attack.png)
+![error](/assets/images/Detection-Engineer/Visibility-pic/mitre-attack.png)
 
 **Building a Visibility Heat Map bridges the gap between theory and operational defense.
 By combining attacker behaviors (from the attacker heat map) with your telemetry reality (from DeTT&CT analysis), you create a strategic detection roadmap.**
+
