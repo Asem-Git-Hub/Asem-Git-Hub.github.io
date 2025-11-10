@@ -41,7 +41,7 @@ That enables:
 
 - Privilege escalation without cracking passwords
 
-# Three General Manipulation Paths (Attacker Options)
+# General Manipulation Paths (Attacker Options)
 
 - Steal an existing token that's allow to Impersonate a logged-in privileged.
 - Create a new logon session using credentials found elsewhere
@@ -351,4 +351,5 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
 
