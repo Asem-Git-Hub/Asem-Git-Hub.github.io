@@ -351,5 +351,11 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+# Resources 
 
+- https://attack.mitre.org/techniques/T1134/
+- https://www.elastic.co/blog/how-attackers-abuse-access-token-manipulation
+- https://www.elastic.co/blog/introduction-to-windows-tokens-for-security-practitioners
+- https://www.fortinet.com/resources/cyberglossary/kerberos-authentication
+- https://cymulate.com/blog/cymulates-sigma-rules/
 
