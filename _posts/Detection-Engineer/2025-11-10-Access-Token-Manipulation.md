@@ -195,7 +195,7 @@ Sysmon Event IDs: 1, 10, 13
 
  **Recovery & hardening (post-incident)**
 
-- return hosts only after reimage, patching, and validation.
+- return hosts only after `reimage, patching, and validation.`
 - Restrict NTLM and disable legacy crypto (disable RC4, enforce strong Kerberos crypto).
 - Audit and reduce the number of privileged accounts and their use on endpoints.
 - Review service account practices, unique passwords, constrained delegation, and no shared local admin hashes.
@@ -203,7 +203,7 @@ Sysmon Event IDs: 1, 10, 13
  **Detection tuning & monitoring**
 
 - Alert on 4768 where Account requested a TGT from a host that is not the user’s workstation or without interactive logon.
-- Alert on unusual 4769 immediately after a suspicious 4768 for high-value accounts.
+- Alert on unusual `4769` immediately after a suspicious `4768 for high-value accounts.`
 - Monitor EDR for LSASS access events and correlate to Kerberos events.
 - Baseline normal Kerberos behavior per account to reduce false positives.
 
@@ -216,7 +216,7 @@ id: a1c7128e-55fa-4c0e-8f6c-e1a4f54b01e8
 status: experimental
 description: Detects usage of NETONLY / NewCredentials via runas.exe where a process is started with alternate credentials for network authentication only.
 author: Asem Ashraf
-date: 2025-11-09
+date: 2025-11-10
 references:
   - https://attack.mitre.org/techniques/T1134/
 tags:
@@ -256,7 +256,7 @@ id: 1bc7e7fd-7c92-4bd7-8e59-5e02bc6cdf1f
 status: experimental
 description: Detects suspicious Kerberos authentication activity that may indicate Pass-the-Ticket or forged ticket attacks.
 author: Asem Ashraf
-date: 2025-11-09
+date: 2025-11-10
 references:
   - https://attack.mitre.org/techniques/T1550/
 tags:
@@ -292,7 +292,7 @@ id: 7b517daa-9094-45e4-82f5-f7e3d65d2962
 status: experimental
 description: Detects execution of tools commonly used for ticket extraction or manipulation such as Rubeus and Mimikatz.
 author: Asem Ashraf
-date: 2025-11-09
+date: 2025-11-10
 tags:
   - attack.t1003.001
   - attack.credential_access
@@ -328,7 +328,7 @@ id: d1f57ab3-1453-470e-9dd2-b3fb395a63a7
 status: experimental
 description: Detects suspicious process accessing LSASS memory, often associated with token manipulation or credential dumping.
 author: Asem Ashraf
-date: 2025-11-09
+date: 2025-11-10
 tags:
   - attack.t1003.001
   - attack.credential_access
@@ -351,4 +351,3 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
-
