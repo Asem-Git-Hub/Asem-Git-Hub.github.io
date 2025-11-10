@@ -2,7 +2,7 @@
 title: " Access Token Manipulation "
 classes: wide
 header:
-  teaser: /assets/images/digital-forensics/Access-Token-Manipulation-pic/.png
+  teaser: /assets/images/digital-forensics/Access-Token-Manipulation-pic/tgt.png
 ribbon:
 description: " This technique is highly dangerous because it's acts as another user without knowing the password and that's enables stealthy lateral movement or Uses legitimate Windows APIs and authentication flows and that's bypasses many endpoint detections or Often does not create clear security events	Low noise with normal traffic."
 categories:
@@ -352,5 +352,6 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
 
 
