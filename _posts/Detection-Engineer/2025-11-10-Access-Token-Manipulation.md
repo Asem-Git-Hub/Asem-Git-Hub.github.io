@@ -41,11 +41,11 @@ That enables:
 
 # Three General Manipulation Paths (Attacker Options)
 
-- Steal an existing token that's allow to	Impersonate a logged-in privileged.
+- Steal an existing token that's allow to Impersonate a logged-in privileged.
 - Create a new logon session using credentials found elsewhere
 - Modify cached credentials inside LSASS memory.
 
-![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/attacker-goals.png)
+![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/attacker-goals-1.png)
 
 # Variants of Access Token Manipulation (T1134 Sub-Techniques)
 
@@ -59,18 +59,18 @@ Typical abuse:
 ``runas /netonly /user:domain\admin cmd.exe``
 
 **Logs to look for:**   
-- Event ID 4648 (logon with explicit credentials)
+- Event ID 4648 (logon with credentials)
 - Event ID 4624 with LogonType = 9
 
 **Suspicious when:**   
-- runas /netonly used from non-admin workstation  
+- `runas /netonly` used from non-admin workstation  
 - Low-privilege user spawning powershell.exe or cmd.exe with NETONLY credentials
 - NETONLY creation followed by:
     - SMB connection
     - RDP authentication
     - File share access
 
-***NETONLY + Network activity = HIGH-RISK***
+`*NETONLY + Network activity = HIGH-RISK`
 
 ## Pass-The-Ticket (PTT – Kerberos abuse)
 
@@ -83,17 +83,16 @@ You receive tickets
 You use the tickets to access resources 
 
 **Authentication Flow**
-
-1. User logs in   
-2. User enters username + password  
-3. Authentication Service (AS) verifies password   
-4. If successful → user receives TGT (Ticket Granting Ticket)
-5. User needs to access a service ( file share, SQL server)
-6. TGT is presented to Ticket Granting Service (TGS)
-7. KDC issues a Service Ticket (ST) specific to the requested service
-8. User sends the Service Ticket to the service
-9. Service decrypts the ticket using its own service account key
-10. User is granted access (based on permissions)
+ 
+1. User enters username + password  
+2. Authentication Service (AS) verifies password   
+3. If successful → user receives TGT (Ticket Granting Ticket)
+4. User needs to access a service ( file share, SQL server)
+5. TGT is presented to Ticket Granting Service (TGS)
+6. KDC issues a Service Ticket (ST) specific to the requested service
+7. User sends the Service Ticket to the service
+8. Service decrypts the ticket using its own service account key
+9. User is granted access (based on permissions)
 
 ![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/tgt.png)
 
@@ -112,7 +111,7 @@ Pass-The-Hash(PTH) lets attackers authenticate as a user by reusing that user’
 
 - Dump credentials from memory (commonly from lsass.exe) to obtain NTLM password hashes. Tools like **Mimikatz** historically do this.
 
-- Use the hash to authenticate to other Windows hosts/services that accept NTLM (SMB, WMI, RPC, WinRM, etc.), typically via tools or native APIs that accept hashes instead of passwords.
+- Use the hash to authenticate to other Windows hosts/services that accept NTLM (SMB, WMI,..), typically via tools or native APIs that accept hashes instead of passwords.
 
 - Gain access on the target host under the victim user’s privileges and continue lateral movement.
 
@@ -120,9 +119,11 @@ Pass-The-Hash(PTH) lets attackers authenticate as a user by reusing that user’
 
 ## Overpass-The-Hash (OPtH – hybrid between Kerberos and NTLM)
 
-OPtH is when an attacker takes a stolen NTLM password hash (not the actual password) and uses it to trick the domain authentication system into giving them a Kerberos ticket. That ticket works like a travel pass — once they have it, they can access many services across the network as that user, without ever knowing the real password.
+- OPtH is when an attacker takes a stolen NTLM password hash (not the actual password) and uses it to trick the domain authentication system into giving them a Kerberos ticket.
 
-## How it differs from PtH and PTT
+- That ticket works like a travel pass, once they have it, they can access many services across the network as that user, without ever knowing the real password.
+
+## How it differs from PtH and PTT (short)
 
 **PtH (Pass-The-Hash):** attacker reuses an NTLM hash directly to authenticate via NTLM protocols (SMB, WMI,..).
 
@@ -132,22 +133,21 @@ OPtH is when an attacker takes a stolen NTLM password hash (not the actual passw
 
 ### workflow
 
-- Attacker obtains an NTLM hash (from LSASS memory,).
+- Attacker obtains an NTLM hash (from LSASS memory).
 - Then initiates an Authentication Service Request to the KDC (Domain Controller) but uses the hash in place of the password for the required proof.
 - If the KDC accepts the authentication proof built from the hash, it issues a TGT.
 - The attacker now holds a TGT for that account and can request service tickets (TGS) to access other services or hosts.
 
-Think of it as:
+Think of it as:              
+`Pass-the-Hash → Pass-the-Ticket`    
 
-Pass-the-Hash → Pass-the-Ticket      
-This grants full Single Sign-On capabilities across the domain.
 
 # Detection Strategy (Defensive View)
 
-- Abnormal logon types `(LogonType = 9 / New Credentials)`	Strong token manipulation indicator
-- LSASS access with PROCESS_VM_READ or WRITE	Required for PtH / OPtH
-- Multiple TGTs for same user / machine	Pass-The-Ticket behavior
-- Unusual parent-child process creation ( runas → powershell.exe)	Abuse of CreateProcessWithTokenW
+- Abnormal logon types `(LogonType = 9 / New Credentials)` Strong token manipulation indicator
+LSASS access with `PROCESS_VM_READ` or `WRITE` Required for PtH / OPtH
+Multiple TGTs for same user Pass-The-Ticket behavior
+Unusual parent-child process creation` (runas → powershell.exe)` Abuse of `CreateProcessWithTokenW`
 
 High-value logs to monitor:
 4624 / 4648 / 5140 / 4672
@@ -158,18 +158,18 @@ Sysmon Event IDs: 1, 10, 13
 
  **Primary detection signals**
 
-- Unexpected TGT issuance (Event 4768) for an account without a corresponding interactive logon.
-- Rapid issuance of service tickets (Event 4769) shortly after a TGT for the same account.
+- Unexpected TGT issuance `Event 4768` for an account without a corresponding interactive logon.
+- Rapid issuance of service tickets `Event 4769` shortly after a TGT for the same account.
 - LSASS memory access or credential-dumping indicators on the host.
 - Kerberos requests using weak crypto types or unusual patterns.
 - New or unusual service access from accounts that typically don’t access those services.
 
  **Immediate triage**
 
-- Record alert context: hosts, time window, user accounts, DCs involved, process names, any EDR alerts.
-- Confirm Kerberos events: pull DC logs for 4768/4769 around the timestamp. Note source workstation and requester IP.
-- Check EDR for LSASS access on the suspected origin host (memory read/write, injected processes, suspicious tools).
-- Map process tree on the origin host (parent -> child processes) and capture command-lines.
+- *Record alert context:* hosts, time window, user accounts, DCs involved, process names, any EDR alerts.
+- *Confirm Kerberos events:* pull DC logs for 4768/4769 around the timestamp. Note source workstation and requester IP.
+- Check EDR for LSASS access on the suspected origin host `(memory read/write, injected processes, suspicious tools).`
+- Map process tree on the origin host `parent -> child processes` and capture command-lines.
 - Do not immediately change anything that would destroy volatile evidence (collect first).
 
  **Containment**
@@ -181,9 +181,9 @@ Sysmon Event IDs: 1, 10, 13
 
  **Investigation & evidence collection**
 
-- Collect logs: DC Security logs (4768/4769), origin host Security/System/Application logs, Sysmon, EDR telemetry, and network flows.
+- Collect logs: DC Security logs `4768/4769`, origin host Security/System/Application logs, Sysmon, EDR telemetry, and network flows.
 - Capture volatile data: EDR memory snapshot of suspicious processes (where permitted).
-- Timeline: initial compromise → LSASS activity → (TGT request) → TGS requests → lateral connections.
+- Timeline: `compromise → LSASS activity → (TGT request) → TGS requests → lateral connections.`
 - Search environment: hunt for same user TGT issuance from other hosts, and similar TGT request anomalies.
 - Preserve chain of custody; record who accessed which evidence.
 
@@ -191,8 +191,7 @@ Sysmon Event IDs: 1, 10, 13
 
 - Reimage compromised hosts if LSASS was accessed or credential dumping is confirmed.
 - Reset credentials for compromised accounts.
-- Invalidate tickets / sessions: purge Kerberos tickets ( user ticket cache) and force re-authentication where possible.
-- Rotate sensitive keys (KRBTGT rotation only as part of major compromises and with AD/Directory SME planning).
+- Invalidate tickets/sessions: purge Kerberos tickets ( user ticket cache) and force re-authentication where possible.
 
  **Recovery & hardening (post-incident)**
 
@@ -352,8 +351,3 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
-
-
-
-
-
