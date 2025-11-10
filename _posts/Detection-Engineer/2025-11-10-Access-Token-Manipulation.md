@@ -2,7 +2,7 @@
 title: " Access Token Manipulation "
 classes: wide
 header:
-  teaser: /assets/images/digital-forensics/Access-Token-Manipulation-pic/tgt.png
+  teaser: /assets/images/Detection-Engineer/Access-Token-Manipulation-pic/tgt.png
 ribbon:
 description: " This technique is highly dangerous because it's acts as another user without knowing the password and that's enables stealthy lateral movement or Uses legitimate Windows APIs and authentication flows and that's bypasses many endpoint detections or Often does not create clear security events	Low noise with normal traffic."
 categories:
@@ -122,7 +122,7 @@ Pass-The-Hash(PTH) lets attackers authenticate as a user by reusing that user’
 
 OPtH is when an attacker takes a stolen NTLM password hash (not the actual password) and uses it to trick the domain authentication system into giving them a Kerberos ticket. That ticket works like a travel pass — once they have it, they can access many services across the network as that user, without ever knowing the real password.
 
-## How it differs from PtH and PTT (short)
+## How it differs from PtH and PTT
 
 **PtH (Pass-The-Hash):** attacker reuses an NTLM hash directly to authenticate via NTLM protocols (SMB, WMI,..).
 
@@ -352,6 +352,7 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
 
 
 
