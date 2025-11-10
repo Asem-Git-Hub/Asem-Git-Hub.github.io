@@ -144,10 +144,10 @@ This grants full Single Sign-On capabilities across the domain.
 
 # Detection Strategy (Defensive View)
 
-Abnormal logon types (LogonType = 9 / New Credentials)	Strong token manipulation indicator
-LSASS access with PROCESS_VM_READ or WRITE	Required for PtH / OPtH
-Multiple TGTs for same user / machine	Pass-The-Ticket behavior
-Unusual parent-child process creation (e.g., runas → powershell.exe)	Abuse of CreateProcessWithTokenW
+- Abnormal logon types `(LogonType = 9 / New Credentials)`	Strong token manipulation indicator
+- LSASS access with PROCESS_VM_READ or WRITE	Required for PtH / OPtH
+- Multiple TGTs for same user / machine	Pass-The-Ticket behavior
+- Unusual parent-child process creation ( runas → powershell.exe)	Abuse of CreateProcessWithTokenW
 
 High-value logs to monitor:
 4624 / 4648 / 5140 / 4672
@@ -352,4 +352,5 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
 
