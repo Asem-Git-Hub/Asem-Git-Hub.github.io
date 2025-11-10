@@ -13,25 +13,27 @@ toc: true
 
 # Overview
 
-Access Token Manipulation (MITRE ATT&CK: T1134) used by threat actors to impersonate other users and move laterally inside Windows Active Directory environments. Instead of stealing plaintext passwords, attackers abuse Windows' built-in authentication mechanisms to reuse cached credentials, Kerberos tickets, NTLM hashes, or new logon sessions.
+- Access Token Manipulation (MITRE ATT&CK: T1134) used by threat actors to impersonate other users and move laterally inside Windows Active Directory environments.
 
-This technique is highly dangerous because it's acts as another user without knowing the password and that's enables stealthy lateral movement or Uses legitimate Windows APIs and authentication flows and that's bypasses many endpoint detections or Often does not create clear security events	Low noise with normal traffic.
+- Instead of stealing plaintext passwords, attackers abuse Windows' built-in authentication mechanisms to reuse cached credentials, Kerberos tickets, NTLM hashes, or new logon sessions.
 
-Access Token Manipulation isn’t a vulnerability, it's abusing how Windows is designed.
+- This technique is highly dangerous because it's acts as another user without knowing the password and that's enables stealthy lateral movement or Uses legitimate Windows APIs and authentication flows and that's bypasses many endpoint detections or Often does not create clear security events	Low noise with normal traffic.
+
+*Access Token Manipulation isn’t a vulnerability, it's abusing how Windows is designed.*
 
 # Key Background Concepts
 
-**Access Token** Represents who you are and what permissions you have and based on this Controls which actions/processes you can perform
+- **Access Token** Represents who you are and what permissions you have and based on this Controls which actions/processes you can perform
 
-**Logon Session Authentication** context created when a user logs in, an attacker can abuse it to Hold cached credentials like hashes or 
+- **Logon Session Authentication** context created when a user logs in, an attacker can abuse it to Hold cached credentials like hashes or 
 Kerberos tickets
 
 
 # Attacker Goal
 
-After initial compromise (phishing,..), attackers run code under a low-privileged token. Their goal becomes:
+- After initial compromise (phishing,..), attackers run code under a low-privileged token. Their goal becomes:
 
-Replace or manipulate their token so Windows thinks they are a more privileged user.
+- Replace or manipulate their token so Windows thinks they are a more privileged user.
 
 That enables:
 
@@ -51,11 +53,9 @@ That enables:
 
 ## New Credentials (Using LogonUser / runas /NETONLY)
 
-NETONLY (also called NewCredentials) is a Windows authentication behavior used when a process is started with different credentials for network authentication only, while locally the process continues running under the original user’s token.
-Does not validate the credentials unless a remote request occurs
+- NETONLY (also called NewCredentials) is a Windows authentication behavior used when a process is started with different credentials for network authentication only, while locally the process continues running under the original user’s token.
 
 Typical abuse:
-
 ``runas /netonly /user:domain\admin cmd.exe``
 
 **Logs to look for:**   
@@ -96,7 +96,7 @@ You use the tickets to access resources
 
 ![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/tgt.png)
 
-If an attacker steals tickets from memory (LSASS), they can impersonate you without password.
+*If an attacker steals tickets from memory (LSASS), they can impersonate you without password.*
 
 **password never travels over the network.**   
 **Kerberos uses encryption + tickets instead.**  
@@ -351,3 +351,4 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
