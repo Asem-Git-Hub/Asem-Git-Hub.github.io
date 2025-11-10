@@ -45,7 +45,7 @@ That enables:
 - Create a new logon session using credentials found elsewhere
 - Modify cached credentials inside LSASS memory.
 
-![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/attacker-goals-1.png)
+![error](/assets/images/Detection-Engineer/Access-Token-Manipulation-pic/attacker-goals.png)
 
 # Variants of Access Token Manipulation (T1134 Sub-Techniques)
 
@@ -351,3 +351,4 @@ falsepositives:
   - Security products legitimately accessing LSASS
 level: high
 ```
+
